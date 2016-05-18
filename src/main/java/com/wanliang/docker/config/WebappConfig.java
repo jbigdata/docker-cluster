@@ -13,18 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wanliang.site.config;
+package com.wanliang.docker.config;
 
 import java.util.List;
 
-import com.wanliang.site.common.security.UserSecurityInterceptor;
-import com.wanliang.site.common.web.servlet.CaptchaServlet;
+import com.wanliang.docker.common.security.UserSecurityInterceptor;
+import com.wanliang.docker.common.web.servlet.CaptchaServlet;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 

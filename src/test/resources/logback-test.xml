@@ -4,7 +4,7 @@
 	<include resource="org/springframework/boot/logging/logback/base.xml"/>
 
 	<jmxConfigurator/>
-	<logger name="com.wanliang.site" level="DEBUG" />
+	<logger name="com.wanliang.docker" level="DEBUG" />
 	<logger name="org.springframework.data" level="INFO" />
 
 </configuration>

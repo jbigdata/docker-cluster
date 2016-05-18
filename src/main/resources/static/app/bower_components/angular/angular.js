@@ -10800,7 +10800,7 @@ function $HttpProvider() {
      * server can verify that the cookie matches `X-XSRF-TOKEN` HTTP header, and therefore be sure
      * that only JavaScript running on your domain could have sent the request. The token must be
      * unique for each user and must be verifiable by the server (to prevent the JavaScript from
-     * making up its own tokens). We recommend that the token is a digest of your site's
+     * making up its own tokens). We recommend that the token is a digest of your docker's
      * authentication cookie with a [salt](https://en.wikipedia.org/wiki/Salt_(cryptography&#41;)
      * for added security.
      *
@@ -27145,7 +27145,7 @@ function isObjectEmpty(obj) {
  * @description
  * The `ngNonBindable` directive tells Angular not to compile or bind the contents of the current
  * DOM element. This is useful if the element contains what appears to be Angular directives and
- * bindings but which should be ignored by Angular. This could be the case if you have a site that
+ * bindings but which should be ignored by Angular. This could be the case if you have a docker that
  * displays snippets of code, for instance.
  *
  * @element ANY

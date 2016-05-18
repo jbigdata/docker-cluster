@@ -1,6 +1,6 @@
-package com.wanliang.site.config;
+package com.wanliang.docker.config;
 
-import com.wanliang.site.common.security.*;
+import com.wanliang.docker.common.security.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
@@ -95,7 +95,7 @@ public class WebSecurityConfig {
     public CacheManager cacheManager() {
         logger.debug("create cache mamager.");
         EhCacheManager cacheManager = new EhCacheManager();
-        cacheManager.setCacheManager(com.wanliang.site.config.CacheConfig.cacheManager().getObject());
+        cacheManager.setCacheManager(com.wanliang.docker.config.CacheConfig.cacheManager().getObject());
         return cacheManager;
     }
 

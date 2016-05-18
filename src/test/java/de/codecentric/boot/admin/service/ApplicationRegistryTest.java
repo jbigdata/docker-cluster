@@ -11,7 +11,7 @@
 //import org.springframework.test.context.ContextConfiguration;
 //import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 //
-//import com.wanliang.site.config.WebappConfig;
+//import com.wanliang.docker.config.WebappConfig;
 //
 //@ContextConfiguration(classes = { WebappConfig.class })
 //@RunWith(SpringJUnit4ClassRunner.class)

@@ -1,4 +1,4 @@
-package com.wanliang.site.config;
+package com.wanliang.docker.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
