@@ -25,8 +25,8 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-@Import({WebappConfig.class,DataBaseConfig.class, RedisConfig.class, FreemarkerConfig.class, WebSecurityConfig.class})
-public class SpringBootAdmin {
+@Import({WebappConfig.class, FreemarkerConfig.class})
+public class Aplication {
 
 	/**
 	 * Starting point for application to boot.
@@ -35,7 +35,7 @@ public class SpringBootAdmin {
 	 *            Passed arguments.
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootAdmin.class, args);
+		SpringApplication.run(Aplication.class, args);
 	}
 
 

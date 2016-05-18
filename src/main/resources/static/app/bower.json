@@ -1,6 +1,6 @@
 {
-  "name": "DockerSwarm UI Client",
-  "author": "Mohamed Labouardy",
+  "name": "DockerSwarm 集群管理",
+  "author": "wan_liang@126.com",
   "dependencies": {
     "bootstrap-css": "~3.3.6",
     "angular": "angularjs#~1.5.0",

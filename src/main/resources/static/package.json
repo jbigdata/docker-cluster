@@ -1,12 +1,12 @@
 {
-  "name": "dockerswarm-ui",
+  "name": "docker-cluster",
   "version": "1.0.0",
-  "description": "Docker Swarm UI",
+  "description": "docker-cluster  UI",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "mlabouardy <mohamed@labouardy.com> (http://labouardy.com)",
+  "author": "wan_liang@126.com",
   "license": "ISC",
   "dependencies": {
     "ascii-banner": "0.0.2",

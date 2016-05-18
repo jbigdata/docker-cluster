@@ -16,11 +16,6 @@
 package com.wanliang.docker.config;
 
 import java.util.List;
-
-import com.wanliang.docker.common.security.UserSecurityInterceptor;
-import com.wanliang.docker.common.web.servlet.CaptchaServlet;
-import org.springframework.boot.context.embedded.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -39,55 +34,4 @@ public class WebappConfig extends WebMvcConfigurerAdapter {
 		converters.add(new MappingJackson2HttpMessageConverter());
 	}
 
-    /**
-     7.     * 配置拦截器
-     8.     * @author lance
-     9.     * @param registry
-     10.     */
-       public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(new UserSecurityInterceptor()).addPathPatterns("/user/**");
-
-           }
-
-    @Bean(name = "captchaServlet")
-    public ServletRegistrationBean captchaServlet() {
-        ServletRegistrationBean bean = new ServletRegistrationBean();
-        bean.setServlet(new CaptchaServlet());
-        bean.addUrlMappings("/captcha");
-        return bean;
-    }
 }
-
-
-//
-//import com.alibaba.fastjson.serializer.SerializerFeature;
-//		import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-//		import org.springframework.context.annotation.Bean;
-//		import org.springframework.context.annotation.Configuration;
-//		import org.springframework.http.converter.HttpMessageConverter;
-//		import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-//
-//		import java.nio.charset.Charset;
-//		import java.util.List;
-//
-//
-//@Configuration
-//public class WebappConfig extends WebMvcConfigurationSupport {
-//
-//
-//	@Bean
-//	public FastJsonHttpMessageConverter customFastJsonHttpMessageConverter() {
-//		FastJsonHttpMessageConverter jsonConverter = new FastJsonHttpMessageConverter();
-//		jsonConverter.setCharset(Charset.forName("UTF-8"));
-//		jsonConverter.setFeatures(SerializerFeature.WriteDateUseDateFormat);
-//		return jsonConverter;
-//	}
-//
-//	@Override
-//	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-//		converters.add(customFastJsonHttpMessageConverter());
-//		super.addDefaultHttpMessageConverters(converters);
-//	}
-//
-//
-//}

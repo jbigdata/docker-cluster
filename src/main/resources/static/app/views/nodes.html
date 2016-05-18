@@ -3,19 +3,19 @@
     <div class="col-lg-12">
       <div class="ibox float-e-margins">
         <div class="ibox-title">
-          <h5>Nodes of cluster</h5>
+          <h5>集群中的节点</h5>
         </div>
         <div class="ibox-content">
           <table class="table table-sm" style="font-size:12px">
             <thead>
               <tr>
-                <th>Status</th>
-                <th>Name</th>
-                <th>Host</th>
-                <th>Containers</th>
+                <th>状态</th>
+                <th>名称</th>
+                <th>主机</th>
+                <th>容器</th>
                 <th>CPU</th>
-                <th>Memory</th>
-                <th>Update at</th>
+                <th>内存</th>
+                <th>更新时间</th>
                 <th></th>
               </tr>
             </thead>
@@ -28,7 +28,7 @@
                 <td>{{node.cpu}}</td>
                 <td>{{node.memory}}</td>
                 <td>{{node.update}}</td>
-                <td><a class="btn btn-danger btn-xs" ng-click="open($index)"><i class="fa fa-info-circle"></i> Details</a></td>
+                <td><a class="btn btn-danger btn-xs" ng-click="open($index)"><i class="fa fa-info-circle"></i> 详情</a></td>
               </tr>
             </tbody>
           </table>
