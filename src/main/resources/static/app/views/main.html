@@ -9,7 +9,7 @@
           </div>
           <div class="col-xs-8 text-right">
             <span> 运行中</span>
-            <h2 class="font-bold">{{info.ContainersRunning}}</h2>
+            <h2 class="font-bold">{{info.containersRunning}}</h2>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@
           </div>
           <div class="col-xs-8 text-right">
             <span>停止 </span>
-            <h2 class="font-bold">{{info.ContainersStopped}}</h2>
+            <h2 class="font-bold">{{info.containersStopped}}</h2>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="col-xs-8 text-right">
             <span> 镜像数 </span>
-            <h2 class="font-bold">{{info.Images}}</h2>
+            <h2 class="font-bold">{{info.images}}</h2>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
           </div>
           <div class="col-xs-8 text-right">
             <span> 系统信息 </span>
-            <h2 class="font-bold" style="font-size:12px">{{info.OperatingSystem}}</h2>
+            <h2 class="font-bold" style="font-size:12px">{{info.operatingSystem}}</h2>
           </div>
         </div>
       </div>
@@ -61,28 +61,28 @@
       <div class="widget lazur-bg p-xl">
 
         <h2>
-          Docker {{version.Version}}
+          Docker {{version.version}}
         </h2>
         <ul class="list-unstyled m-t-md">
           <li>
             <span class="fa fa-connectdevelop m-r-xs"></span>
             <label>API:</label>
-            {{version.ApiVersion}}
+            {{version.apiVersion}}
           </li>
           <li>
             <span class="fa fa-linux m-r-xs"></span>
             <label>OS:</label>
-            {{version.Os}}
+            {{version.os}}
           </li>
           <li>
             <span class="fa fa-home m-r-xs"></span>
             <label>Arch:</label>
-            {{version.Arch}}
+            {{version.arch}}
           </li>
           <li>
             <span class="fa fa-cog m-r-xs"></span>
             <label>Kernel:</label>
-            {{version.KernelVersion}}
+            {{version.kernelVersion}}
           </li>
         </ul>
 
@@ -95,7 +95,7 @@
             <i class="fa fa-cloud fa-5x"></i>
           </div>
           <div class="col-xs-8 text-right">
-            <span> Nodes </span>
+            <span> 节点数 </span>
             <h2 class="font-bold">{{info.SystemStatus[3][1]}}</h2>
           </div>
         </div>
@@ -108,7 +108,7 @@
             <i class="fa fa-wrench fa-5x"></i>
           </div>
           <div class="col-xs-8 text-right">
-            <span> Strategy </span>
+            <span> 策略 </span>
             <h2 class="font-bold">{{info.SystemStatus[1][1]}}</h2>
           </div>
         </div>

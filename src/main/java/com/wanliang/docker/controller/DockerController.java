@@ -1,5 +1,6 @@
 package com.wanliang.docker.controller;
 
+import com.wanliang.docker.model.SwarmInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,12 @@ public class DockerController {
 
 
     @RequestMapping(value = "/info", method = RequestMethod.GET)
-    public void info( HttpServletResponse response) throws Exception {
-
+    public SwarmInfo info(HttpServletResponse response) throws Exception {
+        SwarmInfo info = new SwarmInfo();
+        info.setContainersRunning(10);
+        info.setImages(10);
+        info.setContainersStopped(20);
+        info.setOperatingSystem("Linux CentOS");
+        return info;
     }
 }
