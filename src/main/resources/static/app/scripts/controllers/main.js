@@ -9,7 +9,7 @@ angular.module('dockerswarmUI')
       showMethod: 'slideDown',
       timeOut: 2000
     };
-    toastr.success('Manage your cluster', 'DockerSwarm UI');
+    toastr.success('管理您的集群', '提示信息');
 
   }, 1300);
 
@@ -19,12 +19,12 @@ angular.module('dockerswarmUI')
     $scope.info=info.data;
     console.log($scope.info.SystemStatus[3]);
   },function(){
-    toastr.error('Server is not responding', 'DockerSwarm UI');
+    toastr.error('服务器没有响应', '提示信息');
   });
 
   DockerFactory.version().then(function(version){
     $scope.version=version.data;
   },function(){
-    toastr.error('Server is not responding', 'DockerSwarm UI');
+    toastr.error('服务器没有响应', '提示信息');
   });
 });
