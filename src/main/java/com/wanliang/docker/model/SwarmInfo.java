@@ -11,8 +11,6 @@ public class SwarmInfo {
 
     private String operatingSystem;
 
-    private VersionInfo version;
-
     public int getContainersRunning() {
         return containersRunning;
     }
@@ -45,11 +43,4 @@ public class SwarmInfo {
         this.operatingSystem = operatingSystem;
     }
 
-    public VersionInfo getVersion() {
-        return version;
-    }
-
-    public void setVersion(VersionInfo version) {
-        this.version = version;
-    }
 }
