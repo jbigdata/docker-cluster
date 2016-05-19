@@ -1,5 +1,6 @@
 package com.wanliang.docker.controller;
 
+import com.sun.org.apache.xml.internal.resolver.Catalog;
 import com.wanliang.docker.model.Container;
 import com.wanliang.docker.model.ClusterInfo;
 import com.wanliang.docker.model.VersionInfo;
@@ -10,6 +11,7 @@ import com.wanliang.docker.util.UiUtils;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,6 +50,15 @@ public class DockerController {
         versionInfo.setOs("Centos 7.0");
         versionInfo.setVersion("1.2.2");
         return versionInfo;
+    }
+
+    @RequestMapping(value = "/images")
+    @Cacheable("listImages")
+    @DefineCache(expireAfterWrite = 120_000)
+    public List<String> listImages() {
+        Catalog catalog = registryService.getCatalog();
+        List<String> repositories = catalog.getRepositories();
+        return filter(repositories);
     }
 
     @RequestMapping(value = "/containers", method = RequestMethod.GET)
