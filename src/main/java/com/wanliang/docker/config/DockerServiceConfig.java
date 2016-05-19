@@ -1,12 +1,18 @@
 package com.wanliang.docker.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Configuration for docker service api config
  */
+@Configuration
 public class DockerServiceConfig {
 
-    private String host;
+    @Value("${docker.swarm.port:2375}")
     private int port;
+    @Value("${docker.swarm.host:swarm}")
+    private String host;
     private String dockerHome;
     private int maxCountOfInstances;
     private String hostLogDir;

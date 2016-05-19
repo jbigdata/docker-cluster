@@ -142,7 +142,7 @@ h5 {
   padding: 14px 20px 14px 25px;
 }
 .nav.navbar-right > li > a {
-  color: #999c9e;
+  color: #888888;
 }
 .nav > li.active > a {
   color: #ffffff;
@@ -243,7 +243,7 @@ h5 {
   left: auto;
 }
 .dropdown-messages,
-.dropdown-alerts {
+.dropdown-alerts {navbar-static-top
   padding: 10px 10px 10px 10px;
 }
 .dropdown-messages li a,
@@ -418,7 +418,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 }
 .navbar-fixed-top,
 .navbar-static-top {
-  background: #f3f3f4;
+  background: #fff;
 }
 .fixed-nav #wrapper {
   margin-top: 0;
